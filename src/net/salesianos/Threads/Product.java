@@ -2,7 +2,7 @@ package net.salesianos.Threads;
 
 import net.salesianos.sincronized.StoreEmpanada;
 
-public class Product {
+public class Product implements Runnable {
     private final StoreEmpanada store;
     private final int cantidadProducir;
 
