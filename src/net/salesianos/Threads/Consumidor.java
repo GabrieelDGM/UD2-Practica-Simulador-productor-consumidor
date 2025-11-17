@@ -1,8 +1,6 @@
+package net.salesianos.Threads;
+
 import net.salesianos.sincronized.StoreEmpanada;
-
-package net.salesianos.synchronized.threads;
-
-import net.salesianos.synchronized.StoreEmpanada;
 
 public class Consumidor implements Runnable {
 
@@ -19,7 +17,7 @@ public class Consumidor implements Runnable {
         try {
             for (int i = 0; i < cantidad; i++) {
                 store.consume();
-                Thread.sleep(350);
+                Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

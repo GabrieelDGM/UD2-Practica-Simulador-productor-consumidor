@@ -1,8 +1,5 @@
-package net.salesianos.sincronized;
-
-
 import net.salesianos.Threads.Consumidor;
-import net.salesianos.sincronized.Product;
+import net.salesianos.Threads.Productor;
 import net.salesianos.sincronized.StoreEmpanada;
 
 public class Main {
@@ -10,7 +7,7 @@ public class Main {
 
         StoreEmpanada store = new StoreEmpanada(10);
 
-        Product productor = new Productor(store, 20);
+        Productor productor = new Productor(store, 20);
         Consumidor consumidor = new Consumidor(store, 20);
 
         Thread hiloProductor = new Thread(productor, "Productor");

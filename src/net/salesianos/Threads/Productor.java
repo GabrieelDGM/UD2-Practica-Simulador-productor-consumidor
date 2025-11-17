@@ -15,10 +15,10 @@ public class Productor implements Runnable {
     public void run() {
         try {
             for (int i = 0; i < cantidad; i++) {
-                String types = types[(int)(Math.random() * tipos.length)];
+                String tipo = types[(int)(Math.random() * types.length)];
                 Product empanada = new Product(tipo);
                 store.produce(empanada);
-                Thread.sleep(300);
+                Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

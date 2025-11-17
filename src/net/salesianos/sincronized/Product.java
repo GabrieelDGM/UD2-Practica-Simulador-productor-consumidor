@@ -1,4 +1,4 @@
-package net.salesianos.synchronized;
+package net.salesianos.sincronized;
 
 public class Product {
 
