@@ -1,19 +1,15 @@
-## Getting Started
+# Experimiento-uno
+✔️ Requisitos
+*1 producto
+*1 consumidor
+*el productor genera 5 empanadas
+*el consumidor come de esas 5 empanadas
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+✔️ Objetivo
+producción → almacenaje → consumo.
 
-## Folder Structure
+✔️ Captura de consola
 
-The workspace contains two folders by default, where:
+![Consola](src/net/image/salida.png)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-"# UD2-Practica-Simulador-productor-consumidor" 
+# El proceso continúa hasta completar las 5 unidades.
