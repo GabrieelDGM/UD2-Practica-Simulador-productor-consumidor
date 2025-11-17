@@ -1,19 +1,15 @@
-## Getting Started
+# Experimiento-uno
+✔️ Requisitos
+Tiempo de producción MUCHO más corto.
+Tiempo de consumo más largo.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+✔️ Objetivo
+El almacén se llena más rápido
+→ el productor tiene que esperar
+→ se ve más actividad del consumidor.
 
-## Folder Structure
+✔️ Captura de consola
 
-The workspace contains two folders by default, where:
+![Consola](src/net/images/salida.png)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-"# UD2-Practica-Simulador-productor-consumidor" 
+# El consumidor ahora domina la ejecución, y se ve que el productor entra muchas veces en estado de espera porque el buffer se llena mientras el consumidor tarda en comer.
