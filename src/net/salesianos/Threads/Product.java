@@ -18,10 +18,10 @@ public class Product implements Runnable {
     public void run() {
         try {
             for (int i = 1; i <= cantidadProducir; i++) {
-                String type = types[i % types.length];
+                String type = types[i];
                 store.produce(new Product(store, 1));
 
-                Thread.sleep(500);
+                Thread.sleep(1000);
 
             }
 
