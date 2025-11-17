@@ -20,6 +20,18 @@ public class StoreEmpanada {
         System.out.println("Produced: " + product);
         notifyAll();
     }
+    public synchronized Product consume() throws InterruptedException {
+        while (store.isEmpty()) {
+            System.out.println("El almancen esta vacio, espera que hayan empanadas");
+            wait();
+        }
+        Product product = store.poll();
+        System.out.println("Consumed: " + product);
+        notifyAll();
+        return product;
+    }
+
+
 
 
 }
