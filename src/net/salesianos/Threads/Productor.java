@@ -15,7 +15,7 @@ public class Productor implements Runnable {
     public void run() {
         try {
             for (int i = 0; i < cantidad; i++) {
-                String tipo = tipos[(int)(Math.random() * tipos.length)];
+                String types = types[(int)(Math.random() * tipos.length)];
                 Product empanada = new Product(tipo);
                 store.produce(empanada);
                 Thread.sleep(300);
