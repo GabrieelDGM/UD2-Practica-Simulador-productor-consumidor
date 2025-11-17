@@ -5,7 +5,7 @@ import net.salesianos.sincronized.StoreEmpanada;
 public class Main {
     public static void main(String[] args) {
 
-        StoreEmpanada store = new StoreEmpanada(10);
+        StoreEmpanada store = new StoreEmpanada(5);
 
         Productor productor = new Productor(store, 20);
         Consumidor consumidor = new Consumidor(store, 20);
