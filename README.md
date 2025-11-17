@@ -1,19 +1,24 @@
-## Getting Started
+# Experimento Tres
+✔️ Cambio:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Las prioridades de los productores se aumentan:
 
-## Folder Structure
+hiloProductor.setPriority(Thread.MAX_PRIORITY);
 
-The workspace contains two folders by default, where:
+✔️ Resultado:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Los productores trabajan más rápido, similar al experimento 2, pero con diferencias:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+La producción gana prioridad.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+El consumo ocurre después.
 
-## Dependency Management
+No es exactamente igual al experimento 2 pero se parece.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-"# UD2-Practica-Simulador-productor-consumidor" 
+✔️ Captura:
+
+![salida](src/net/images/salida.png)
+✔️ Explicación:
+
+Debido a la prioridad alta, el sistema operativo ejecuta más tiempo el hilo productor, lo que acelera la llegada de productos al almacén.
+El consumidor consume apenas tiene oportunidad.
