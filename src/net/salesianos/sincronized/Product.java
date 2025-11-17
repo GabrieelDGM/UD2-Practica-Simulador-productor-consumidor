@@ -1,32 +1,19 @@
-package net.salesianos.Threads;
+package net.salesianos.synchronized;
 
-import net.salesianos.sincronized.Product;
-import net.salesianos.sincronized.StoreEmpanada;
+public class Product {
 
-public class Product implements Runnable {
-    private final StoreEmpanada store;
-    private final int cantidadProducir;
+    private final String tipo;
 
-    private final String[] types = { "Queso", "Pollo", "Pabellon", "Carne", "Jamon y queso" };
+    public Product(String tipo) {
+        this.tipo = tipo;
+    }
 
-    public Product(StoreEmpanada store, int cantidadProducir) {
-        this.store = store;
-        this.cantidadProducir = cantidadProducir;
+    public String getTipo() {
+        return tipo;
     }
 
     @Override
-    public void run() {
-        try {
-            for (int i = 1; i <= cantidadProducir; i++) {
-                String type = types[i];
-                store.produce(new Product(store, 1));
-
-                Thread.sleep(1000);
-
-            }
-
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+    public String toString() {
+        return "Empanada (" + tipo + ")";
     }
 }
