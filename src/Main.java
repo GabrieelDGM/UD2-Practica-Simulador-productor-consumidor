@@ -5,15 +5,14 @@ import net.salesianos.sincronized.StoreEmpanada;
 public class Main {
     public static void main(String[] args) {
 
-        StoreEmpanada store = new StoreEmpanada(10);
+        StoreEmpanada store = new StoreEmpanada(5);
 
-        Productor productor = new Productor(store, 20);
-        Consumidor consumidor = new Consumidor(store, 20);
+        Productor productor = new Productor(store, 30);
+        Consumidor consumidor1 = new Consumidor(store, 15);
+        Consumidor consumidor2 = new Consumidor(store, 15);
 
-        Thread hiloProductor = new Thread(productor, "Productor");
-        Thread hiloConsumidor = new Thread(consumidor, "Consumidor");
-
-        hiloProductor.start();
-        hiloConsumidor.start();
+        new Thread(productor, "Productor").start();
+        new Thread(consumidor1, "Consumidor 1").start();
+        new Thread(consumidor2, "Consumidor 2").start();
     }
 }
